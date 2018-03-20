@@ -3,8 +3,12 @@ package com.demo.camera;
 public class PhotoCamera {
 
     ImageSensor sensor;
+    Card card;
+    byte [] table={};
 
-    public PhotoCamera(ImageSensor sensor) {
+
+    public PhotoCamera(Card card,ImageSensor sensor) {
+        this.card = card;
         this.sensor = sensor;
     }
 
@@ -17,7 +21,8 @@ public class PhotoCamera {
     }
 
     public void pressButton() {
-        // not implemented
+      sensor.read();
+      card.write(table);
     }
 
 }
