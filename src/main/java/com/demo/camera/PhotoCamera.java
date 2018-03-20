@@ -19,5 +19,6 @@ public class PhotoCamera {
     public void pressButton() {
         // not implemented
     }
+
 }
 
